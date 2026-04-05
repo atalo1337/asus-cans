@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASUS CANS 商店</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <p class="tag">ONLY Sale today</p>
+        <h1 id="storeName">ASUS CANS 购买商店</h1>
+        <p class="subtitle">全场限时 50% OFF（仅今日）</p>
+      </header>
+
+      <section id="plans" class="plans" aria-live="polite"></section>
+
+      <p id="purchaseResult" class="purchase-result" role="status" aria-live="polite"></p>
+
+      <footer class="note">
+        <p>价格和折扣由 Cloudflare Pages Functions 动态返回，可通过变量与机密配置。</p>
+      </footer>
+    </main>
+
+    <dialog id="paymentDialog" class="payment-dialog">
+      <form id="paymentForm" method="dialog">
+        <h2 id="dialogPlan">选择付款方式</h2>
+        <div class="payment-options">
+          <label><input type="radio" name="payMethod" value="微信" checked /> 微信支付</label>
+          <label><input type="radio" name="payMethod" value="支付宝" /> 支付宝</label>
+          <label><input type="radio" name="payMethod" value="银行卡" /> 银行卡</label>
+        </div>
+        <div class="dialog-actions">
+          <button type="button" id="cancelPayment" class="btn ghost">取消</button>
+          <button type="submit" class="btn primary">付款完成</button>
+        </div>
+      </form>
+    </dialog>
+
+    <template id="planTemplate">
+      <article class="card">
+        <h2 class="plan-name"></h2>
+        <p class="sale-badge">50% OFF</p>
+        <p class="price-row">
+          <span class="price-discount"></span>
+          <span class="price-original"></span>
+        </p>
+        <button class="buy-btn" type="button">立即购买</button>
+      </article>
+    </template>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
