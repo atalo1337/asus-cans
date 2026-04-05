@@ -1,0 +1,13 @@
+name = "asus-cans-store"
+compatibility_date = "2025-12-01"
+pages_build_output_dir = "."
+
+[vars]
+STORE_NAME = "ASUS CANS 购买商店"
+CURRENCY = "USD"
+SALE_PERCENT = "50"
+PRICE_DAY = "9.9"
+PRICE_WEEK = "29.9"
+PRICE_MONTH = "89.9"
+PRICE_YEAR = "599.9"
+CHECKOUT_URL = "https://example.com/checkout"
